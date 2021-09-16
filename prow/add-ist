@@ -56,7 +56,7 @@ def add_tag(imagestream: dict, tag_name: str) -> None:
 
 
 stream = None
-with open("overlays/cnv-prod/imagestreamtags.yaml") as ist:
+with open("overlays/PROD/imagestreamtags.yaml") as ist:
     stream = load_all(ist.read(), Loader=Loader)
 
 updated_imagestream_tags = []
@@ -69,5 +69,5 @@ for data in stream:
 
     updated_imagestream_tags.append(data)
 
-with open("overlays/cnv-prod/imagestreamtags.yaml.new", "w") as ist:
+with open("overlays/PROD/imagestreamtags.yaml.new", "w") as ist:
     ist.write(dump_all(updated_imagestream_tags, Dumper=Dumper, sort_keys=True))
