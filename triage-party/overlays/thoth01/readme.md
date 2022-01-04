@@ -1,0 +1,1 @@
+created my own secret with my token rather than deploying via kustomize/sops
