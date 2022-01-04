@@ -6,10 +6,9 @@ metadata:
     app: triage-party
   name: triage-party-pcache
 spec:
+  storageClass: local-storage
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 10Gi
-  nfs:
-    path: /app/pcache
